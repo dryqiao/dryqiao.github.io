@@ -29,14 +29,14 @@ title: GithubPages教程
 
     * 新建index.html,输入`hello world`
 
-    ![git](/public/img/git1.png)
+    ![git](http://owicv5j2l.bkt.clouddn.com/git1.png)
     
     * push 到仓库，
 
-    ![git](/public/img/git2.png)
+    ![git](http://owicv5j2l.bkt.clouddn.com/git2.png)
     * 浏览器上输入`<username>.github.io`，完成
 
-    ![git](/public/img/git3.png)
+    ![git](http://owicv5j2l.bkt.clouddn.com/git3.png)
 
 ---
 
@@ -54,6 +54,6 @@ title: GithubPages教程
 
 5、浏览器访问`www.xxx.xxx`，页面会自动打开刚才生成的github pages站点。完成！
 
-![git](/public/img/git4.png)
+![git](http://owicv5j2l.bkt.clouddn.com/git4.png)
 
 
