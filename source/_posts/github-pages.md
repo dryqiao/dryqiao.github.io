@@ -78,61 +78,57 @@ Jekyll是一个静态站点生成器，它会根据网页源码生成静态文�
     `_config.yml`：jekyll的配置文件
 
     `_layouts` ： 存放模板的文件夹,创建default.html,写入以下内容：
+    ```
+　　<!DOCTYPE html>
+　　<html>
+　　<head>
+　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+　　　　<title>{{ page.title }}</title>
+　　</head>
+　　<body>
 
-        　　<!DOCTYPE html>
-        　　<html>
-        　　<head>
-        　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        　　　　<title>{{ page.title }}</title>
-        　　</head>
-        　　<body>
+　　　　{{ content }}
 
-        　　　　{{ content }}
-
-        　　</body>
-        　　</html>
-    
+　　</body>
+　　</html>
+    ```
     `_posts` ： 存放文章，支持html和md格式
 
     `index.html` : 首页，写入以下内容：
 
-            ---
-        　　layout: default
-        　　title: 我的Blog
-        　　---
-        　　# {{ page.title }}
+    ```
+    ---
+    layout: default
+    title: 我的Blog
+    ---
 
-    ## <p>最新文章
-
-　
-        　　　　{% for post in site.posts %}
-        　　　　　　<li>{{ post.date | date_to_string }} 
-                    <a href="{{ site.baseurl }}{{ post.url 
-                    }}">{{ post.title }}</a>
-                  </li>
-        　　　　{% endfor %}
-        　　</ul>
+    <h2>{{ page.title }}</h2>
+　　<p>最新文章</p>
+　　<ul>
+　　　　{% for post in site.posts %}
+　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　{% endfor %}
+　　</ul>
+    ```
     它已yaml文件头表示首页调用的default模板，title是`我的blog`,
 
 2. 开始写博客，博客名要为`yyyy-mm-dd-文章标题-后缀`,创建`2017-09-20-helloWorld.md`，写入下面内容
+    ```
+    ---
+    layout: default
+    title: 你好，世界
+    ---
+    # {{ page.title }}
 
-            ---
-        　　layout: default
-        　　title: 你好，世界
-        　　---
-        　　# {{ page.title }}
+    ## 我的第一篇文章
 
-        　　## 我的第一篇文章
-
-           #### Hello World!
-
+    #### Hello World!
+    ```
 3. 提交到仓库
-
-        git add .
-
-        git commit -m""
-
-        git push origin master
-
+    ```
+    git add .
+    git commit -m""
+    git push origin master
+    ```
 
 4. 访问`username.github.io`,就可以看到自己写的博客了，基本功能介绍到这，想博客变得更好看的话，可以自己写代码，也可以去官网fork别人的主题。
