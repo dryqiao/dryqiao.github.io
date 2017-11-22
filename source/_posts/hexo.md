@@ -1,5 +1,7 @@
 ---
 title: HEXO+GITHUB 零前端基础建站教程
+
+date: 2017/9/30 10:16:03
 ---
 
 # HEXO+GITHUB 零前端基础建站教程
