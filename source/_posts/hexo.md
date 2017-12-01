@@ -1,7 +1,7 @@
 ---
 title: HEXO+GITHUB 零前端基础建站教程
 
-date: 2017/9/30 10:16:03
+date: 2017/10/30 10:16:03
 categories: 前端
 ---
 
@@ -27,18 +27,18 @@ Hexo是一个快速、简洁且高效的博客框架，与上一篇博客讲到�
 
 看脸233333。。官网的对比，自己选择吧
 
-[Hexo](https://hexo.io/)  
+[Hexo](https://hexo.io/)
 [jekyll](http://jekyll.com.cn/)
 
-正式开始
+正式开始
 
 1. 安装hexo
 
 `npm install hexo-cli -g`
 
-2. 初始化项目
+2. 初始化项目
 
-选择一个路径，执行以下命令创建项目，博客名称自己想
+选择一个路径，执行以下命令创建项目，博客名称自己想
 
 ```
  hexo init <blog>
@@ -71,7 +71,7 @@ OK,这个时候博客已经在本地搭建完成了
 
 来看一下这几个文件目录
 _config.yml //博客的配置，
-source //文章放在source/_posts文件夹里，md格式
+source //文章放在source/_posts文件夹里，md格式
 
 4. 发表第一篇博客
 在source/_posts里新建 hello.md
@@ -84,12 +84,12 @@ title: Hello World
 
 HELLO WORLD !!!
 ```
-保存，执行之前的两条命令
+保存，执行之前的两条命令
 ```
 hexo g
 hexo s -p 5000
 ```
-OK,打开http://localhost:5000/看自己的文章吧
+OK,打开`localhost:5000`看自己的文章吧
 
 
 ## 三、发布到github pages站点上
@@ -99,7 +99,7 @@ OK,打开http://localhost:5000/看自己的文章吧
 `npm instal lhexo-deployer-git  --save`
 
 2. 配置github信息
-打开_config.yml，这个文件是整个项目的配置文件,配置不详细介绍了，主要修改以下配置，
+打开_config.yml，这个文件是整个项目的配置文件,配置不详细介绍了，主要修改以下配置，
 
 ```
 # Deployment
@@ -115,7 +115,7 @@ deploy:
 
 ```
 hexo g
-hexo deployer //可以用缩写d
+hexo deployer //可以用缩写d
 ```
 
 打开你的github pages站点，<username.github.io>
@@ -125,11 +125,11 @@ hexo deployer //可以用缩写d
 
 ![hexod](http://owicv5j2l.bkt.clouddn.com/hexo_d.png)
 
-是不是很眼熟，没错，hexo d就是把生成的public静态文件夹的内容git push到仓库里。
+是不是很眼熟，没错，hexo d就是把生成的public静态文件夹的内容git push到仓库里。
 
 那问题来了，hexo d会重新push一遍，把hexo的项目文件冲掉，那我们怎么提交hexo的项目文件呢，不可能每次都在这台电脑上写文章吧。
 
-git的强大又一次体现出来了，我们可以利用分支。
+git的强大又一次体现出来了，我们可以利用分支。
 
 hexo的项目内容放在hexo分支上，当然这个分支名字你可以随便取。
 hexo deployer生成的内容放在默认的master分支上。
