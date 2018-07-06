@@ -50,7 +50,7 @@ docker info
 
 ### 编写Docker文件
 新建`.dockerignore`文件，写入以下内容：
-```
+```javascript
 .git
 node_modules
 npm-debug.log
