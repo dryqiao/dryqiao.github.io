@@ -99,3 +99,6 @@ EXPOSE 3000：将容器 3000 端口暴露出来， 允许外部连接这个端�
 可以通过`docker ps`查看正在运行的容器
 
 ![](http://owicv5j2l.bkt.clouddn.com/docker-ps.png)
+
+
+下一篇写doker-compose，结束。
