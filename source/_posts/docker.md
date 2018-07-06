@@ -101,4 +101,4 @@ EXPOSE 3000：将容器 3000 端口暴露出来， 允许外部连接这个端�
 ![](http://owicv5j2l.bkt.clouddn.com/docker-ps.png)
 
 
-下一篇写doker-compose，结束。
+下一篇准备写doker-compose，结束。
