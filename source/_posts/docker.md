@@ -84,7 +84,7 @@ EXPOSE 3000：将容器 3000 端口暴露出来， 允许外部连接这个端�
 这里可以用VSCODE的一个插件，`Docker`,可以自动生成这些内容，方便。
 
 ### 创建image文件
-有了`Dockerfile`文件后，可以用`docker image build -t [镜像名]]`命令创建image文件
+有了`Dockerfile`文件后，可以用`docker image build -t [镜像名]] .`命令创建image文件
 执行后，如下图所示
 ![](http://owicv5j2l.bkt.clouddn.com/docker-bd.png)
 
