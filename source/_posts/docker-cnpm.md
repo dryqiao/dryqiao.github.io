@@ -1,7 +1,7 @@
 ---
 title: 用Docker搭建cnpm私有仓库以及私有仓库的使用
 date: 2018/09/21
-categories: Docker cnpm
+categories: [Docker,cnpm]
 ---
 # 用Docker搭建cnpm私有仓库以及私有仓库的使用
 
