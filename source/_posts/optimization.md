@@ -8,7 +8,7 @@ categories: 前端
 > 深入理解http请求的过程是前端性能优化的核心
 
 HTTP请求过程：
-![http](http://owicv5j2l.bkt.clouddn.com/http.png)
+![http](http://dry-image.test.upcdn.net/http.png)
 
 1. dns是否可以通过缓存减少dns查询时间
 1. 网络请求的过程走最近的网络环境
@@ -59,7 +59,7 @@ HTTP请求过程：
 ## 图片优化
 
 ### 图片解析流程：
-![图片解析](http://owicv5j2l.bkt.clouddn.com/imageAnalysis.png)
+![图片解析](http://dry-image.test.upcdn.net/imageAnalysis.png)
 
 每种图片格式都有自己的特点，针对不同的业务场景选择不同的图片格式很重要
 
@@ -68,7 +68,7 @@ HTTP请求过程：
 1. webp压缩程度更好，在ios webview有兼容性问题 
 1. svg矢量图，代码内嵌，相对较小，图片样式相对简单的场景
 
-![选择图片格式](http://owicv5j2l.bkt.clouddn.com/choosePic.png)
+![选择图片格式](http://dry-image.test.upcdn.net/choosePic.png)
 
 
 ### 图片优化方案
@@ -112,7 +112,7 @@ HTTP请求过程：
 
 HTML页面渲染过程
 
-![dom](http://owicv5j2l.bkt.clouddn.com/dom.png)
+![dom](http://dry-image.test.upcdn.net/dom.png)
 
 ## 重绘回流
 

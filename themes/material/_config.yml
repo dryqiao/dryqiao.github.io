@@ -70,8 +70,8 @@ background:
 
 # Images Settings
 img:
-    logo: http://owicv5j2l.bkt.clouddn.com/avatar.jpg
-    avatar: http://owicv5j2l.bkt.clouddn.com/avatar.jpg
+    logo: http://dry-image.test.upcdn.net/avatar.jpg
+    avatar: http://dry-image.test.upcdn.net/avatar.jpg
     daily_pic: "/img/daily_pic.png"
     sidebar_header: "/img/sidebar_header.png"
     random_thumbnail: "/img/random/material-"

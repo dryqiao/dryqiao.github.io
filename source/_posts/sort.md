@@ -9,7 +9,7 @@ categories: js
 数据结构必学的内容，现在用js重新实现一遍，加深印象
 这里写了个算法demo，如果觉得本篇太长可以看这个：[算法demo](http://dryqiao.com/sort)
 ##### 复杂度总结
-![](http://owicv5j2l.bkt.clouddn.com/sort.jpg)
+![](http://dry-image.test.upcdn.net/sort.jpg)
 # 冒泡排序
 
 排序算法的入门，应该都很熟悉吧，冒泡排序需要两个嵌套的循环， 其中, 外层循环移动游标，内层循环遍历游标及之后(或之前)的元素, 通过两两交换的方式, 每次只确保该内循环结束位置排序正确, 然后内层循环周期结束, 交由外层循环往后(或前)移动游标, 随即开始下一轮内层循环, 以此类推, 直至循环结束。
@@ -22,7 +22,7 @@ categories: js
 | O(n²)      | O(n²)  |   O(n²)   |  O(n²)
 ##### 实现图解
     
-![a](http://owicv5j2l.bkt.clouddn.com/fdce56a6-fbb6-11e6-9cfd-3f82b9667b94.png)
+![a](http://dry-image.test.upcdn.net/fdce56a6-fbb6-11e6-9cfd-3f82b9667b94.png)
 
 ##### 实现代码
 ```
@@ -50,7 +50,7 @@ categories: js
 | O(n²)      | O(n)  |   O(n²)   |  O(1)
 
 ######## 实现图解
-![](http://owicv5j2l.bkt.clouddn.com/TIM%E5%9B%BE%E7%89%8720180427161231.png)
+![](http://dry-image.test.upcdn.net/TIM%E5%9B%BE%E7%89%8720180427161231.png)
 
 #### 实现代码
 ```
@@ -84,7 +84,7 @@ categories: js
 
 ##### 实现图解:
 
-![a](http://owicv5j2l.bkt.clouddn.com/quicksort.png)
+![a](http://dry-image.test.upcdn.net/quicksort.png)
 
 ##### 实现代码:
 ```
@@ -115,7 +115,7 @@ categories: js
 
 ##### 实现图解
 
-![mergesort](http://owicv5j2l.bkt.clouddn.com/mergeSort.png)
+![mergesort](http://dry-image.test.upcdn.net/mergeSort.png)
 
 
 ##### 实现代码
@@ -144,11 +144,11 @@ merge(left, right) {
 
 大顶堆：
 
-![bigheap](http://owicv5j2l.bkt.clouddn.com/bigheap.png)
+![bigheap](http://dry-image.test.upcdn.net/bigheap.png)
 
 小顶堆：
 
-![smallheap](http://owicv5j2l.bkt.clouddn.com/smallheap.png)
+![smallheap](http://dry-image.test.upcdn.net/smallheap.png)
 
 
 
@@ -166,22 +166,22 @@ merge(left, right) {
 ##### 实现图解
 1. 初始化堆
 
-    ![init](http://owicv5j2l.bkt.clouddn.com/initheap.png)
+    ![init](http://dry-image.test.upcdn.net/initheap.png)
 2. 创建大顶堆,从第一个非叶子节点开始，往上遍历，保证每个非叶子节点比它的叶子节点值大
 
-    ![big](http://owicv5j2l.bkt.clouddn.com/initheap1.png)
+    ![big](http://dry-image.test.upcdn.net/initheap1.png)
     =>
-    ![big1](http://owicv5j2l.bkt.clouddn.com/initheap2.png)
+    ![big1](http://dry-image.test.upcdn.net/initheap2.png)
 
 3. 将堆顶元素和末尾元素交换，使末尾元素最大，然后继续往上调整。这时候堆其实分成了两块，无序堆(1到n-1)和有序堆(n)
 
-    ![](http://owicv5j2l.bkt.clouddn.com/initheap3.png)
+    ![](http://dry-image.test.upcdn.net/initheap3.png)
     =>
-    ![](http://owicv5j2l.bkt.clouddn.com/initheap4.png)
+    ![](http://dry-image.test.upcdn.net/initheap4.png)
 
 4. 重复步骤3,完成堆排序
 
-    ![](http://owicv5j2l.bkt.clouddn.com/initheap5.png)
+    ![](http://dry-image.test.upcdn.net/initheap5.png)
 
 ##### 实现代码
 

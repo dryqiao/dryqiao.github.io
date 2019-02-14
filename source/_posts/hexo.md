@@ -61,11 +61,11 @@ hexo g
 hexo s
 ```
 
-![hexog](http://owicv5j2l.bkt.clouddn.com/hexo_g.png)
+![hexog](http://dry-image.test.upcdn.net/hexo_g.png)
 
 默认端口号为4000，生成成功后，有时候会有冲突，用以下命令来修改端口号
 `hexo s -p 5000`
-![hexos](http://owicv5j2l.bkt.clouddn.com/hexo_s.png)
+![hexos](http://dry-image.test.upcdn.net/hexo_s.png)
 
 OK,这个时候博客已经在本地搭建完成了
 
@@ -123,7 +123,7 @@ hexo deployer //可以用缩写d
 
 进入自己的github仓库里，可以看到项目目录为：
 
-![hexod](http://owicv5j2l.bkt.clouddn.com/hexo_d.png)
+![hexod](http://dry-image.test.upcdn.net/hexo_d.png)
 
 是不是很眼熟，没错，hexo d就是把生成的public静态文件夹的内容git push到仓库里。
 

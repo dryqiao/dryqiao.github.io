@@ -8,14 +8,14 @@ categories: Docker
 ## 安装docker
 下载地址：[Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
 安装完成之后会重启，重启之后突然给我来个报错，windows果然不能乱用
-![](http://owicv5j2l.bkt.clouddn.com/error.png)
+![](http://dry-image.test.upcdn.net/error.png)
 还好点了链接进去，就能看到解决方法，需要进入bios修改配置,将virtualization technology 打开。
 
 可以参考这篇：[bios打开VTx](https://zhidao.baidu.com/question/240877150936295084.html)
 
 操作完成之后重启电脑，docker会自动弹出以下窗口：
 
-![](http://owicv5j2l.bkt.clouddn.com/done.png)
+![](http://dry-image.test.upcdn.net/done.png)
 
 可以通过以下命令查看是否安装成功
 ```javascript
@@ -35,13 +35,13 @@ docker info
 
 `docker images ls`
 
-![](http://owicv5j2l.bkt.clouddn.com/docker-hw.png)
+![](http://dry-image.test.upcdn.net/docker-hw.png)
 
 运行这个image文件
 
 `docker container run hello-world`
 
-![](http://owicv5j2l.bkt.clouddn.com/docker-hello.png)
+![](http://dry-image.test.upcdn.net/docker-hello.png)
 
 输出完成之后，这个容器会自动终止，有些容器提供的是服务，不会自动终止，可以通过命令终止 `docker container kill [containID]`
 
@@ -86,7 +86,7 @@ EXPOSE 3000：将容器 3000 端口暴露出来， 允许外部连接这个端�
 ### 创建image文件
 有了`Dockerfile`文件后，可以用`docker image build -t [镜像名]] .`命令创建image文件
 执行后，如下图所示
-![](http://owicv5j2l.bkt.clouddn.com/docker-bd.png)
+![](http://dry-image.test.upcdn.net/docker-bd.png)
 
 ### 生成容器
 执行`docker container run -p 8000:3000 -it [镜像名] /bin/bash`
@@ -98,7 +98,7 @@ EXPOSE 3000：将容器 3000 端口暴露出来， 允许外部连接这个端�
 
 可以通过`docker ps`查看正在运行的容器
 
-![](http://owicv5j2l.bkt.clouddn.com/docker-ps.png)
+![](http://dry-image.test.upcdn.net/docker-ps.png)
 
 
 下一篇准备写doker-compose，结束。

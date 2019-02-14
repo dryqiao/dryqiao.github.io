@@ -1,6 +1,6 @@
 ---
 title: 关于我
-thumbnail: http://owicv5j2l.bkt.clouddn.com/supreme.gif
+thumbnail: http://dry-image.test.upcdn.net/supreme.gif
 ---
 
 我知这世界，本如露水般短暂，
@@ -9,7 +9,7 @@ thumbnail: http://owicv5j2l.bkt.clouddn.com/supreme.gif
 
 然而。
 
-![me](http://owicv5j2l.bkt.clouddn.com/me.jpg)
+![me](http://dry-image.test.upcdn.net/me.jpg)
 
 ### QIAO
 
@@ -17,5 +17,4 @@ thumbnail: http://owicv5j2l.bkt.clouddn.com/supreme.gif
 
 1994
 杭州
-前端开发
-学穿前端，再搞后端，全栈起飞
+all in JavaScript

@@ -60,7 +60,7 @@ cnpmjs.org修改的部分配置，
 `docker tag cnpmjs.org:1.0 dryqiao/cnpmjs.org:1.0`
 `docker push dryqiao/cnpmjs.org:1.0`
 然后如下图，推送成功!
-![](http://owicv5j2l.bkt.clouddn.com/docker-push.png)
+![](http://dry-image.test.upcdn.net/docker-push.png)
 
 这里我将容器的7001,7002映射到17001和17002上，因为7001容易被占用
 
@@ -69,7 +69,7 @@ cnpmjs.org修改的部分配置，
 `docker run -it --name cnpmjs.org -p 17001:7001 -p 17002:7002 dryqiao/cnpmjs.org`
 
 现在在浏览器打开`localhost:17002`，能看到下图表示仓库搭建成功！
-![](http://owicv5j2l.bkt.clouddn.com/docker-7002.png)
+![](http://dry-image.test.upcdn.net/docker-7002.png)
 
 ## 私有仓库的使用
 
@@ -84,11 +84,11 @@ cnpm init
 cnpm publish
 ```
 出现下图表示发布成功！
-![](http://owicv5j2l.bkt.clouddn.com/cnpm-publish.png)
+![](http://dry-image.test.upcdn.net/cnpm-publish.png)
 
 可以通过命令查看这个私有包的信息
 `cnpm view @md/hhh`
-![](http://owicv5j2l.bkt.clouddn.com/cnpm-view.png)
+![](http://dry-image.test.upcdn.net/cnpm-view.png)
 
 #### 下载包
 

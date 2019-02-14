@@ -28,11 +28,11 @@ categories: 前端
 * 点击`create repository`
 * git clone 到本地
 * 新建index.html,输入`hello world`,
-    ![git](http://owicv5j2l.bkt.clouddn.com/git1.png)
+    ![git](http://dry-image.test.upcdn.net/git1.png)
 * push 到仓库，
-    ![git](http://owicv5j2l.bkt.clouddn.com/git2.png)
+    ![git](http://dry-image.test.upcdn.net/git2.png)
 * 浏览器上输入`<username>.github.io`，完成
-    ![git](http://owicv5j2l.bkt.clouddn.com/git3.png)
+    ![git](http://dry-image.test.upcdn.net/git3.png)
 
 ---
 
@@ -46,7 +46,7 @@ categories: 前端
 1. 在项目根目录创建`CNAME`文件,里面输入刚才注册的域名`www.xxx.xxx`，保存并push到github。
 1. 浏览器访问`www.xxx.xxx`，页面会自动打开刚才生成的github pages站点。完成！
 
-![git](http://owicv5j2l.bkt.clouddn.com/git4.png)
+![git](http://dry-image.test.upcdn.net/git4.png)
 
 
 ## 三、jekyll入门
