@@ -1,7 +1,7 @@
 ---
 title: cordova+vue混合开发
 date: 2019/02/01 15:15:39
-categories: vue
+categories: [vue,cordova]
 ---
 # cordova+vue混合开发
 第一次用cordova混合开发，前端用Vue开发，demo里调用cordova的相机插件，最后用cordova打包成安卓apk。
