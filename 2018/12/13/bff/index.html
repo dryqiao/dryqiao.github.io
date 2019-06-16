@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0 -->
+    <script>
+        window.materialVersion = "1.5.0"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    
+    <title>
+        
+            译 Backends For Frontends | 
+        
+        Qiao
+    </title>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Qiao">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Qiao">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icon -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="译 Backends For Frontends | Qiao">
+    <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="Thu Dec 13 2018 21:13:51 GMT+0800" />
+        <meta property="article:modified_time" content="Sun Jun 16 2019 23:02:10 GMT+0800" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="译 Backends For Frontends | Qiao">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://yoursite.com" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2018/12/13/bff/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/12/13/bff/index.html",
+    "headline": "译 Backends For Frontends",
+    "datePublished": "Thu Dec 13 2018 21:13:51 GMT+0800",
+    "dateModified": "Sun Jun 16 2019 23:02:10 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Qiao",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://dry-image.test.upcdn.net/avatar.jpg"
+        },
+        "description": "谦虚谨慎，四平八稳"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Qiao",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#译-Backends-For-Frontends"><span class="post-toc-number">1.</span> <span class="post-toc-text">[译] Backends For Frontends</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#介绍"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通用的后端架构"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">通用的后端架构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#BFF的介绍"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">BFF的介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#应该设计多少个BFF？"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">应该设计多少个BFF？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#多个微服务"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">多个微服务</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#重用和BFF"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">重用和BFF</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#为桌面web和其他服务的BFF"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">为桌面web和其他服务的BFF</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自治"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">自治</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常见的周边问题"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">常见的周边问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么时候使用BFF"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">什么时候使用BFF</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结论"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">结论</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                译 Backends For Frontends
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://dry-image.test.upcdn.net/avatar.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Qiao</strong>
+        <span>12月 13, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=译 Backends For Frontends&url=http://yoursite.com/2018/12/13/bff/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=译 Backends For Frontends&url=http://yoursite.com/2018/12/13/bff/index.html&via=Qiao" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/13/bff/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/13/bff/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="译-Backends-For-Frontends"><a href="#译-Backends-For-Frontends" class="headerlink" title="[译] Backends For Frontends"></a>[译] Backends For Frontends</h1><blockquote>
+<p>原文：<a href="https://samnewman.io/patterns/architectural/bff/" target="_blank" rel="external">Backends For Frontends</a><br>作者：Sam Newman</p>
+</blockquote>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>随着web的出现和成功，UI的实际方式已经从笨重的客户端应用转移到web应用，这一趋势也使得基于saas的解决方案的增长成为可能。通过web交付产品的好处是巨大的，可以大大降低发布新版本的成本，因为客户端需要安装的成本完全消除了。</p>
+<p>但是这个简单的环境并没有持续太久，因为移动时代也随之而来。现在我们有个问题。我们希望把服务端功能同时开放给桌面web UI和一个或多个移动UI。但是由于最初开发系统时考虑的是web UI，我们在适配这些移动端UI时经常遇到兼容性问题，因为在web UI和后端服务之间建立了紧密的耦合。</p>
+<h2 id="通用的后端架构"><a href="#通用的后端架构" class="headerlink" title="通用的后端架构"></a>通用的后端架构</h2><p>要适应不止一种类型的UI，第一步通常是提供一个单一的服务端API，并随着时间的推移不断添加更多的功能，以支持新的移动交互类型:</p>
+<div align="center"><img src="http://dry-image.test.upcdn.net/bff1.jpg" alt=""></div><br>如果这些不同的UI对接口的调用十分相似的话，那么这种通用API很容易实现。但是，移动端体验从本质上就与web端有很大的不同。首先，移动端可提供的功能不同。移动端提供的屏幕更小，我们只能显示更少的数据。过多对服务器的请求会耗尽电池寿命和有限的数据计划。其次，我们希望在移动端上提供的交互是完全不同的。想想一个典型的实体零售商。在桌面应用程序上，我可能允许你查看待售商品、在线订购或在商店预订。不过，在移动端上，我可能想让你扫描条形码进行价格比较，或者提供优惠。随着我们构建了越来越多的移动app，我们开始意识到人们使用它们的交互非常不同，因此我们需要提供的功能也会有所不同。<br>所以在实际上，移动端希望得到不同，更少的接口，并希望展示与桌面端不同（尽量少）的数据。这意味着我们需要提供额外的API来支持移动端应用。<br>通用API的另一个问题是，它们是用来为多个面向用户的应用程序提供功能的。这意味着在我们交付新功能时单个API可能成为瓶颈，比如许多修改都可能是对同一个模块的更改。<br>通用API后端往往承担多个职责，因此需要大量工作，这常常导致专门创建一个团队来维护这些代码。这可能使问题更糟,因为现在前端团队必须与一个单独的团队进行对接以进行更改 - 这个团队必须平衡不同客户团队的优先级,同时要与多个下游团队合作，在新的API可用时去使用它们。可以说在这一点上，我们已经在我们的架构中创建了一个智能中间件，这个中间件并不专注于任何特定的业务领域 - 这与许多人设想中的合理的面向服务的架构完全相悖。<br><div align="center"><img src="http://dry-image.test.upcdn.net/bff2.jpg" alt=""></div>
+
+<h2 id="BFF的介绍"><a href="#BFF的介绍" class="headerlink" title="BFF的介绍"></a>BFF的介绍</h2><p>我在REA和SoundCloud中使用过的一个解决方案是，每个客戶端有一个对应的后端服务，而不是只有一个通用的API后端，称之为服务于前端的后端(Backend For Frontend)。 从概念上讲，应该将面向用户的应用程序视为两个组件：面向用户的客户端应用程序和对应的服务器端组件（BFF）。</p>
+<p>BFF与特定的客户端用户体验紧密耦合，通常由一个团队维护接口，从而使接口更容易定义和适配UI的需求，同时还简化了客户端和服务器两者的发布流程。</p>
+<pre><code>&lt;div align=center&gt;![](http://dry-image.test.upcdn.net/bff3.jpg)&lt;/div&gt;
+</code></pre><p>BFF专注于单个客户端，这使得它更集中且更小巧。</p>
+<h2 id="应该设计多少个BFF？"><a href="#应该设计多少个BFF？" class="headerlink" title="应该设计多少个BFF？"></a>应该设计多少个BFF？</h2><p>当设计到在不同平台上提供相同（或类似）的用户体验时，我看到了两种不同的方法。我更喜欢的模型是为每种不同类型的客户端做一个BFF  - 这是我在REA看到的模型：<br>    <div align="center"><img src="http://dry-image.test.upcdn.net/bff4.jpg" alt=""></div><br>我在SoundCloud使用的另一个模型是，每种类型的用户界面使用一个BFF，因此Android和iOS版本的原生应用程序使用相同的BFF：<br>    <div align="center"><img src="http://dry-image.test.upcdn.net/bff5.jpg" alt=""></div></p>
+<p>我对于第二个模型的关注点是，使用单个BFF的客户端类型越多，就越容易因为处理多个问题而变得臃肿。这里要理解的关键是，即使共享BFF，它也只适用于同一类用户界面,虽然SoundCloud的iOS和Android平台的app使用相同的BFF，但其他平台的应用将使用不同的BFF。如果同一团队维护开发Android和iOS应用程序和BFF层，我也会更轻松地使用这个模型，但如果这些应用程序由不同的团队维护，我倾向于推荐更严格的模型。 因此，团队的组织架构视是选择模型主要驱动因素之一。值得注意的是，和我交流过的SoundCloud工程师建议，如果今天重新做决定，为Android和iOS应用程序提供一个统一BFF是需要重新考虑的。<br>我非常喜欢Stewart Gleadow的一个指导原则是“一种体验，一个BFF”。 所以如果iOS和Android体验非常相似，那么共同使用一个BFF没问题。 然而，如果他们分歧很大，那么拥有单独的BFF就更有意义了。<br>Pete Hodgson观察到BFF在团队边界对齐时效果最好，应该由团队结构来驱动拥有多少个BFF。 因此，如果有一个移动团队，那么应该有一个BFF，但如果有单独的iOS和Android团队，那么它们各自应该拥有单独的BFF。 我担心的是团队结构往往比我们的系统架构更流畅更容易改变。 如果你有一个服务于移动端的BFF，那么将团队分成iOS和Android，那么是否必须拆分BFF？ 如果BFF已经分开，那么拆分团队会更容易，因为您可以重新分配已经独立的资源。 BFF和团队结构的相互作用很重要。<br>为了避免服务器端代码冗余，通常希望BFF数量少一点，但是有其他方法可以来处理这个问题。</p>
+<h2 id="多个微服务"><a href="#多个微服务" class="headerlink" title="多个微服务"></a>多个微服务</h2><p>BFF对于只有少量后端服务的架构来说是一种有用的模式。但是对于使用大量服务的业务架构来说，它们可能是必不可少的，因为大量的业务需求需要聚合多个下游微服务。在这种情况下，对BFF的单个接口调用通常会导致对多个下游微服务调用。例如一个电子商务公司的应用，我们想要展示一个用户的愿望列表，显示它的库存和价格。<br>这些信息存储在于多个微服务中，<code>Wishlist</code>微服务存储列表和ID，<code>Catalog</code> 微服务存储它们的名称和价格，<code>Inventory</code> 微服务存储库存量，所以我们需要提供一个至少包含3次调用的方法来获取整个列表信息：<br>    <div align="center"><img src="http://dry-image.test.upcdn.net/bff6.jpg" alt=""></div><br>从效率的角度来看，并行执行尽可能多的接口调用会更明智。理想情况下，一旦对<code>Wishlist</code>服务的初始调用完成，我们希望同时执行对其他服务的调用，这样可以减少总的调用时间。这就需要我们将希望并行执行的调用与顺序执行的调用混合起来，但这会变得难以管理，尤其是对于更复杂的业务场景。<br>理解失败的模式是很重要的。在上面的示例中，我们可以坚持所有下游调用都必须返回，以便将有效负载返回给客户端。然而，这明智吗?显然，如果<code>Wishlist</code>服务关闭了，我们就无能为力了，但是如果<code>Inventory</code>服务关闭了，减少返回给客户端的功能不是更好吗?在第一个实例中，这些关注点必须由BFF本身管理，但是我们还需要确保调用BFF的客户端能够解释部分响应并正确呈现它。</p>
+<h2 id="重用和BFF"><a href="#重用和BFF" class="headerlink" title="重用和BFF"></a>重用和BFF</h2><p>每个UI对应一个BFF的问题是，BFF之间可能会出现大量重复逻辑和代码。例如，它们可能最终使用相同类型的聚合，具有用于与下游服务交互的类似代码等等。有些人对此的反应是希望将它们合并在一起，从而拥有一个通用的聚合API服务。这个模型已经一次又一次地证明，它会导致大量的冗余代码。<br>我之前已经多次提到过，对于跨服务的重复代码，我并不担心。虽然在单个服务中，我会尽量将重复业务抽象出来，但对于跨服务的重复代码，我不会这么做。我更担心的一点是，提取共享代码模块会导致服务器之间的紧密耦合。<br>我的同事Pete Hodgson指出，当你没有BFF时，相同的逻辑最终会融入到不同的客户端中。由于实际上这些客户端使用不同的技术栈，因此很难确定这种复制。由于组织倾向于为服务器端提供一个通用的技术栈，因此有多个具有重用代码的bff可能更容易被发现和提取出来。<br>当需要提取共享代码时，有两个方法。第一个是提取某种共享库，便宜但是复杂。因为共享库会造成耦合，特别是当它用来调用下游服务的的客户端库时。尽管如此，在某些情况下这是合理的，特别是当抽象的代码块完全是服务内部的一个关注点时。<br>另一个方法是将共同功能抽象成一个新的服务，如果你能将它概念化，并对相关领域进行建模，那么它就能很好的工作。<br>这种方法的一个变体是将聚合职责进一步推到服务的下游。以上面讨论愿望列表的例子为例。让我们想象一下，我们在Android和iOS上分别呈现一个愿望列表。每个BFF都需要进行相同的3次调用：</p>
+<div align="center"><img src="http://dry-image.test.upcdn.net/bff7.jpg" alt=""></div><br>我们也可以更改<code>Wishlist</code>服务来为我们进行下游调用，从而简化了上层调用者的工作:<br><div align="center"><img src="http://dry-image.test.upcdn.net/bff8.jpg?center" alt=""></div>
+
+<p>在两个地方使用相同的代码并不一定会使我以这种方法提取出一个服务,如果创建一个新的服务的成本足够低,我肯定会考虑,或者我可以在多几个地方使用它(比如在桌面web上)。</p>
+<h2 id="为桌面web和其他服务的BFF"><a href="#为桌面web和其他服务的BFF" class="headerlink" title="为桌面web和其他服务的BFF"></a>为桌面web和其他服务的BFF</h2><p>你可以把BFF看作是解决移动设备限制的工具。桌面web体验通常是在功能更强大、连接更好的设备上提供的，在这些设备上，进行多个下游调用的成本是可控的。这允许web应用程序直接对下游服务进行多个服务调用，而不需要经过BFF。<br>我也看到过在web上使用BFF的。当使用服务器渲染时，在服务器端生成大量web页面，BFF是可以做到这一点的。它还可以简化有些可以放置一个反向代理缓存BFF的前面,让你缓存聚合调用的结果(虽然你必须确保你设置相应的缓存控制以确保聚合内容的到期一样短的新鲜内容聚合需要它)。事实上，我已经看到它被多次使用，而没有将其称为BFF——事实上，通用API后端常常是由这样一个庞然大物发展而来的。<br>我已经看到至少一个机构将BFF作为第三方调用的服务。比如我长期以来的音乐商店的例子，我可能提供一个BFF，允许第三方提取版税支付信息，提供facebook集成，或者允许流式传输到机顶盒设备。</p>
+<p><div align="center"><img src="http://dry-image.test.upcdn.net/bff9.jpg" alt=""></div><br>这种方法特别有效，因为第三方常常无法(或不希望)使用或更改API。如果使用通用API后端，就不得不保留API的旧版本，以满足无法进行更改的第三方开发人员的一小部分需求。使用BFF，这个问题将大大减少。</p>
+<h2 id="自治"><a href="#自治" class="headerlink" title="自治"></a>自治</h2><p>我们经常看到一种情况是，两个团队前后端分离地进行开发。通常我们是试图转移到围绕业务垂直领域的微服务来避免这种情况，但是经常出现难以避免的情况。首先，在一定的规模和复杂性上，需要多个团队参与。其次，实现优秀的移动端体验对技能深度有很高的要求，需要专业的团队。<br>因此，开发UI的团队面临的情况是，他们调用的API是由另一个团队开发的，而且在开发UI的过程中，API常常在不断发展。BFF可以在这方面提供帮助，特别是当它由开发UI的团队拥有时。他们开发BFF的API的同时开发前端，可以快速地迭代。BFF本身仍然需要调用其他下游服务，但是这可以在不中断前端开发的情况下完成。</p>
+<p><div align="center"><img src="http://dry-image.test.upcdn.net/bff10.jpg" alt=""></div><br>使用像这样沿着团队边界对齐的BFF的另一个好处是，创建接口的团队可以更加灵活地考虑功能的位置。例如，他们可以决定将功能推到服务器端，以促进未来的重用并简化本地移动应用程序，或者允许更快地发布新功能(因为您可以绕过app store审查流程)。如果团队同时拥有移动应用程序和BFF，那么他们可以单独做出决定，而不需要任何跨团队协作。</p>
+<h2 id="常见的周边问题"><a href="#常见的周边问题" class="headerlink" title="常见的周边问题"></a>常见的周边问题</h2><p>有些人使用BFF来实现一般的周边问题，比如身份验证/授权或请求日志记录。这件事让我左右为难。一方面，这个功能非常通用，我倾向于使用位于更上游的另一层来实现它，可能使用类似于Nginx或Apache服务器层的东西。另一方面，这样的附加层只能增加延迟。BFF通常用于微服务环境，在微服务环境中，由于要进行大量的网络调用，我们已经对延迟非常敏感。此外，你需要部署的层越多，就会使开发和测试变得越复杂，因此在BFF中作为一个自包含的解决方案来考虑所有这些问题是很有吸引力的:</p>
+<p><div align="center"><img src="http://dry-image.test.upcdn.net/bff11.jpg" alt=""></div><br>就像我们前面讨论的，解决这种重复的另一种方法是使用共享库。假设您的BFFs正在使用相同的技术，这应该不会太难，尽管在微服务体系架构中是避免使用共享库的。</p>
+<h2 id="什么时候使用BFF"><a href="#什么时候使用BFF" class="headerlink" title="什么时候使用BFF"></a>什么时候使用BFF</h2><p>对于只提供web UI的应用程序，我认为BFF只有在服务器端需要做大量聚合时才有意义。否则我认为其他UI组件技术也可以很好地实现，而不需要额外的服务器端组件。<br>在你需要为移动端或第三方应用提供特定功能时，我强烈推荐一开始就为每一个客户端实现一个BFF。如果额外部署一个服务的成本很高时，我会重新考虑，但是BFF带来的好处是显而易见的。如果前端开发与下游服务之间存在明显的分离，我倾向于使用BFF。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>BFF解决了微服务架构下移动端开发的痛点。它还为通用API后端提供了一个很好的替代方案，许多团队将它们应用于移动开发以外的其他地方。限制他们所支持的消费者数量的简单行为使他们更容易工作和更改，并帮助开发面向客户应用的团队保持更多的自治权。</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/01/06/nodered/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/09/21/docker-cnpm/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="http://dry-image.test.upcdn.net/avatar.jpg" alt="Qiao's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        445271466@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Docker/">Docker<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Docker/cnpm/">cnpm<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/iot/">iot<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/iot/node/">node<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/js/">js<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/node/">node<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/vue/">vue<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/vue/cordova/">cordova<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/译/">译<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/resume" title="简历">
+                
+                    <i class="material-icons sidebar-material-icons">assignment</i>
+                
+                简历
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/look" title="Daily Look">
+                
+                    <i class="material-icons sidebar-material-icons">face</i>
+                
+                Daily Look
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/dryqiao" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Qiao
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
