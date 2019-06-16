@@ -13,7 +13,7 @@ categories: [vue,cordova]
 1. 创建demo项目
 `cordova create demo`
 我电脑上这一步就创建失败，提示：
-`..npmnode_modulescordovanode_modules_cordova-app-hello-world@3.12.0@cordova-app-hello-worldindex.jspackage.json`
+`npmnode_modulescordovanode_modules_cordova-app-hello-world@3.12.0@cordova-app-hello-worldindex.jspackage.json`
 但具体是什么原因造成的，没找到。于是我去[apache/cordova-app-hello-world](https://github.com/apache/cordova-app-hello-world)找到那个模版文件夹，把 `template_src`目录下的内容复制到你自己的目录下，改名为demo 就相当于完成了create 这一步操作了。
 1. 添加安卓平台
 `cd demo`

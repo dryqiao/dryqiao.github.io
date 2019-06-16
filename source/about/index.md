@@ -13,8 +13,8 @@ thumbnail: http://dry-image.test.upcdn.net/supreme.gif
 
 ### QIAO
 
->健身 篮球 吉他 电影 街头
+>健身 篮球 电影 街头 文学
 
 1994
 杭州
-all in JavaScript
+All in JavaScript

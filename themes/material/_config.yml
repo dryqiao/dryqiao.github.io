@@ -204,9 +204,13 @@ sidebar:
             link: "/about"
             icon: person
             divider: false
+        简历:
+            link: "/resume"
+            icon: assignment
+            divider: false
         Daily Look:
             link: "/look"
-            icon: person
+            icon: face
             divider: false
     article_num:
         use: false
