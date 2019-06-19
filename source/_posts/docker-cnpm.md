@@ -12,7 +12,7 @@ categories: [Docker,cnpm]
 但是按照这个跑不起来，一直报环境的环境，所以我稍微修改了下代码，下面是我的Dockerfile：
 ```
 FROM node:10-alpine
-MAINTAINER qiao <445271466@qq.com>
+MAINTAINER qiao
 
 RUN npm install -g cnpm && cnpm i -g cnpmjs.org sqlite3
 
