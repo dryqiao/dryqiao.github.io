@@ -14,7 +14,7 @@ categories: node
 
 主要用到以下几个模块
 
-1. [eventproxy](https://github.com/JacksonTian/eventproxy): http库，可发起GET/POST请求
+1. [eventproxy](https://github.com/JacksonTian/eventproxy): 异步事件处理
 
 1. [superagent](http://visionmedia.github.io/superagent/)：http库，可发起GET/POST请求
 
