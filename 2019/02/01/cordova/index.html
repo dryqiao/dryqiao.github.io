@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="zh">
-    <head>
+    <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -31,7 +31,7 @@
 
 
 
-<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
 
 
@@ -54,14 +54,14 @@
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
     <link rel="icon" href="/img/favicon.png">
 
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content>
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -236,7 +236,7 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="cordova+vue混合开发 | Qiao">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="">
+    <meta property="og:description" content>
     
 
     
@@ -249,7 +249,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2019/02/01/cordova/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2019/02/01/cordova/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -486,24 +486,27 @@
         <h1 id="cordova-vue混合开发"><a href="#cordova-vue混合开发" class="headerlink" title="cordova+vue混合开发"></a>cordova+vue混合开发</h1><p>第一次用cordova混合开发，前端用Vue开发，demo里调用cordova的相机插件，最后用cordova打包成安卓apk。</p>
 <h2 id="一、混合开发初体验"><a href="#一、混合开发初体验" class="headerlink" title="一、混合开发初体验"></a>一、混合开发初体验</h2><h3 id="创建cordova项目"><a href="#创建cordova项目" class="headerlink" title="创建cordova项目"></a>创建cordova项目</h3><ol>
 <li>安装<br><code>npm i -g cordova</code></li>
-<li>创建demo项目<br><code>cordova create demo</code><br>我电脑上这一步就创建失败，提示：<br><code>npmnode_modulescordovanode_modules_cordova-app-hello-world@3.12.0@cordova-app-hello-worldindex.jspackage.json</code><br>但具体是什么原因造成的，没找到。于是我去<a href="https://github.com/apache/cordova-app-hello-world" target="_blank" rel="external">apache/cordova-app-hello-world</a>找到那个模版文件夹，把 <code>template_src</code>目录下的内容复制到你自己的目录下，改名为demo 就相当于完成了create 这一步操作了。</li>
-<li>添加安卓平台<br><code>cd demo</code><br><code>cordova platform add android</code><br>项目结构如图:<br><img src="http://dry-image.test.upcdn.net/cordova1.png" alt=""></li>
+<li>创建demo项目<br><code>cordova create demo</code><br>我电脑上这一步就创建失败，提示：<br><code>npmnode_modulescordovanode_modules_cordova-app-hello-world@3.12.0@cordova-app-hello-worldindex.jspackage.json</code><br>但具体是什么原因造成的，没找到。于是我去<a href="https://github.com/apache/cordova-app-hello-world" target="_blank" rel="noopener">apache/cordova-app-hello-world</a>找到那个模版文件夹，把 <code>template_src</code>目录下的内容复制到你自己的目录下，改名为demo 就相当于完成了create 这一步操作了。</li>
+<li>添加安卓平台<br><code>cd demo</code><br><code>cordova platform add android</code><br>项目结构如图:<br><img src="http://dry-image.test.upcdn.net/cordova1.png" alt></li>
 </ol>
 <p>检查平台状况<br><code>cordova platform ls</code><br> 编译安卓<br><code>cordova build android</code></p>
-<h3 id="创建vue项目"><a href="#创建vue项目" class="headerlink" title="创建vue项目"></a>创建vue项目</h3><p>webpack配置需要改成相对路径，vue-cli3搭建的项目，不再赘述，需要修改<code>vue.config.js</code>文件，将路径改为相对路径：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">	baseUrl: &apos;./&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="创建vue项目"><a href="#创建vue项目" class="headerlink" title="创建vue项目"></a>创建vue项目</h3><p>webpack配置需要改成相对路径，vue-cli3搭建的项目，不再赘述，需要修改<code>vue.config.js</code>文件，将路径改为相对路径：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">	baseUrl: &apos;./&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><code>index.html</code>中需要加入<code>&lt;script type=&quot;text/javascript&quot; src=&quot;cordova.js&quot;&gt;&lt;/script&gt;</code>,<br>因为cordova会把www内的资源打包到<code>.\platforms\android\app\src\main\assets\www</code>,可以直接修改webpack的配置文件，将打包路径改到www里。因为是demo，我弄成了两个项目，没有合到一起，打包完vue项目，手动把<code>dist</code>文件夹内容拷进去。</p>
-<h3 id="安装Android-Studio"><a href="#安装Android-Studio" class="headerlink" title="安装Android Studio"></a>安装Android Studio</h3><p>网上很多，我看得这篇<a href="https://www.cnblogs.com/xiadewang/p/7820377.html" target="_blank" rel="external">安装Android Studio</a></p>
-<h3 id="Android-Studio运行cordova项目"><a href="#Android-Studio运行cordova项目" class="headerlink" title="Android Studio运行cordova项目"></a>Android Studio运行cordova项目</h3><p>将<code>platforms\android</code>文件夹导入到<code>Android Studio</code>,<br>点开这个文件<code>app/src/main/java/io/cordova/demo/MainActivity.java</code>，右键点击<code>Run MainActivity</code>,等它运行完，就会出现下图模拟器：<br><img src="http://dry-image.test.upcdn.net/cordova2.png" alt=""><br>混合开发的基本流程就是这样了。</p>
+<h3 id="安装Android-Studio"><a href="#安装Android-Studio" class="headerlink" title="安装Android Studio"></a>安装Android Studio</h3><p>网上很多，我看得这篇<a href="https://www.cnblogs.com/xiadewang/p/7820377.html" target="_blank" rel="noopener">安装Android Studio</a></p>
+<h3 id="Android-Studio运行cordova项目"><a href="#Android-Studio运行cordova项目" class="headerlink" title="Android Studio运行cordova项目"></a>Android Studio运行cordova项目</h3><p>将<code>platforms\android</code>文件夹导入到<code>Android Studio</code>,<br>点开这个文件<code>app/src/main/java/io/cordova/demo/MainActivity.java</code>，右键点击<code>Run MainActivity</code>,等它运行完，就会出现下图模拟器：<br><img src="http://dry-image.test.upcdn.net/cordova2.png" alt><br>混合开发的基本流程就是这样了。</p>
 <h2 id="二、调用cordova相机插件"><a href="#二、调用cordova相机插件" class="headerlink" title="二、调用cordova相机插件"></a>二、调用cordova相机插件</h2><ol>
 <li><p>安装插件<br><code>cordova plugin add cordova-plugin-camera</code></p>
 </li>
 <li><p>在前端调用相机<br>在按钮单击事件中调用<code>navigator.camera.getPicture</code>方法</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">clickHandler() &#123;</div><div class="line">	let vm = this</div><div class="line">	navigator.camera.getPicture(vm.success, vm.fail, &#123;</div><div class="line">		quality: 50,</div><div class="line">		destinationType: Camera.DestinationType.DATA_URL</div><div class="line">	&#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">clickHandler() &#123;</span><br><span class="line">	let vm = this</span><br><span class="line">	navigator.camera.getPicture(vm.success, vm.fail, &#123;</span><br><span class="line">		quality: 50,</span><br><span class="line">		destinationType: Camera.DestinationType.DATA_URL</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
-<p>其中参数为成功、失败的回调，和相机的配置参数<br><a href="https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-camera/index.html#camera" target="_blank" rel="external">官网API</a></p>
+<p>其中参数为成功、失败的回调，和相机的配置参数<br><a href="https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-camera/index.html#camera" target="_blank" rel="noopener">官网API</a></p>
 <p>在电脑的模拟器上打开是这种效果，连接手机的话会看到手机原生的相机：</p>
-<p><img src="http://dry-image.test.upcdn.net/cordova3.png" alt=""></p>
+<p><img src="http://dry-image.test.upcdn.net/cordova3.png" alt></p>
 <p>混合开发调用原生设备接口的基本流程就是这样。</p>
 
         

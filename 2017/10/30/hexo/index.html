@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="zh">
-    <head>
+    <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -31,7 +31,7 @@
 
 
 
-<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
 
 
@@ -54,14 +54,14 @@
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
     <link rel="icon" href="/img/favicon.png">
 
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content>
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -236,7 +236,7 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="HEXO+GITHUB 零前端基础建站教程 | Qiao">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="">
+    <meta property="og:description" content>
     
 
     
@@ -249,7 +249,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2017/10/30/hexo/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/10/30/hexo/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -496,46 +496,56 @@
 <h2 id="一、github-pages以及域名的搭建"><a href="#一、github-pages以及域名的搭建" class="headerlink" title="一、github pages以及域名的搭建"></a>一、github pages以及域名的搭建</h2><p>见上一篇博客</p>
 <h2 id="二、Hexo入门"><a href="#二、Hexo入门" class="headerlink" title="二、Hexo入门"></a>二、Hexo入门</h2><p>Hexo是一个快速、简洁且高效的博客框架，与上一篇博客讲到的jekyll类似。那为什么选择Hexo呢？</p>
 <p>看脸233333。。官网的对比，自己选择吧</p>
-<p><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a><br><a href="http://jekyll.com.cn/" target="_blank" rel="external">jekyll</a></p>
+<p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a><br><a href="http://jekyll.com.cn/" target="_blank" rel="noopener">jekyll</a></p>
 <p>正式开始</p>
 <ol>
 <li>安装hexo</li>
 </ol>
 <p><code>npm install hexo-cli -g</code></p>
-<ol>
+<ol start="2">
 <li>初始化项目</li>
 </ol>
 <p>选择一个路径，执行以下命令创建项目，博客名称自己想</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo init &lt;blog&gt;</div><div class="line">cd blog</div><div class="line">hexo init</div><div class="line">npm install</div></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;blog&gt;</span><br><span class="line">cd blog</span><br><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
 <li>生成页面，本地起点服务</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo server</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
 <p>执行完后会发现项目目录下多了一个public目录，这个目录里就是框架自动生成的静态文件，博客所有代码，文章都在这里</p>
-<p>上述指令可以用缩写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure></p>
+<p>上述指令可以用缩写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
 <p><img src="http://dry-image.test.upcdn.net/hexo_g.png" alt="hexog"></p>
 <p>默认端口号为4000，生成成功后，有时候会有冲突，用以下命令来修改端口号<br><code>hexo s -p 5000</code><br><img src="http://dry-image.test.upcdn.net/hexo_s.png" alt="hexos"></p>
 <p>OK,这个时候博客已经在本地搭建完成了</p>
 <p>来看一下这几个文件目录<br>_config.yml //博客的配置，<br>source //文章放在source/_posts文件夹里，md格式</p>
-<ol>
+<ol start="4">
 <li>发表第一篇博客<br>在source/_posts里新建 hello.md</li>
 </ol>
-<p>输入以下内容，每篇文章的基础信息都写在“—”里<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: Hello World</div><div class="line">---</div><div class="line"></div><div class="line">HELLO WORLD !!!</div></pre></td></tr></table></figure></p>
-<p>保存，执行之前的两条命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s -p 5000</div></pre></td></tr></table></figure></p>
+<p>输入以下内容，每篇文章的基础信息都写在“—”里</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">HELLO WORLD !!!</span><br></pre></td></tr></table></figure>
+
+<p>保存，执行之前的两条命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s -p 5000</span><br></pre></td></tr></table></figure>
+
 <p>OK,打开<code>localhost:5000</code>看自己的文章吧</p>
 <h2 id="三、发布到github-pages站点上"><a href="#三、发布到github-pages站点上" class="headerlink" title="三、发布到github pages站点上"></a>三、发布到github pages站点上</h2><ol>
 <li>安装hexo自动部署工具</li>
 </ol>
 <p><code>npm instal lhexo-deployer-git  --save</code></p>
-<ol>
+<ol start="2">
 <li>配置github信息<br>打开_config.yml，这个文件是整个项目的配置文件,配置不详细介绍了，主要修改以下配置，</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: 你自己的仓库地址</div><div class="line">  branch: master//分支</div></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 你自己的仓库地址</span><br><span class="line">  branch: master//分支</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
 <li>发布</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo deployer //可以用缩写d</div></pre></td></tr></table></figure>
-<p>打开你的github pages站点，<username.github.io><br>可以看到刚才所写的’hello world’文章</username.github.io></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo deployer //可以用缩写d</span><br></pre></td></tr></table></figure>
+
+<p>打开你的github pages站点，&lt;username.github.io&gt;<br>可以看到刚才所写的’hello world’文章</p>
 <p>进入自己的github仓库里，可以看到项目目录为：</p>
 <p><img src="http://dry-image.test.upcdn.net/hexo_d.png" alt="hexod"></p>
 <p>是不是很眼熟，没错，hexo d就是把生成的public静态文件夹的内容git push到仓库里。</p>

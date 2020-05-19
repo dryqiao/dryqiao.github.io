@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="display: none;" lang="zh">
-    <head>
+    <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <!--
         © Material Theme
@@ -31,7 +31,7 @@
 
 
 
-<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
 
 
@@ -54,14 +54,14 @@
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
     <link rel="icon" href="/img/favicon.png">
 
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content>
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -236,7 +236,7 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="前端性能优化 | Qiao">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="">
+    <meta property="og:description" content>
     
 
     
@@ -249,7 +249,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2017/11/21/optimization/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/11/21/optimization/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -538,24 +538,19 @@
 <li>svg矢量图，代码内嵌，相对较小，图片样式相对简单的场景</li>
 </ol>
 <p><img src="http://dry-image.test.upcdn.net/choosePic.png" alt="选择图片格式"></p>
-<h3 id="图片优化方案"><a href="#图片优化方案" class="headerlink" title="图片优化方案"></a>图片优化方案</h3><p>1、 图片sprite:多个图片合并成一个大图片，雪碧图样式生成网站(<a href="http://www.spritecow.com/" target="_blank" rel="external">spritecow</a>)</p>
+<h3 id="图片优化方案"><a href="#图片优化方案" class="headerlink" title="图片优化方案"></a>图片优化方案</h3><p>1、 图片sprite:多个图片合并成一个大图片，雪碧图样式生成网站(<a href="http://www.spritecow.com/" target="_blank" rel="noopener">spritecow</a>)</p>
 <pre><code>- 优点：减少http请求次数
-- 缺点：合成图片过大时，会导致引用到的所有图片加载延迟，影响首屏性能
-</code></pre><p>2、 image inline：用base64编码替代图片，直接inline到页面或css中</p>
+- 缺点：合成图片过大时，会导致引用到的所有图片加载延迟，影响首屏性能</code></pre><p>2、 image inline：用base64编码替代图片，直接inline到页面或css中</p>
 <pre><code>- 优点：减少http请求次数，可以放大后台数据库，构建方便
-- 缺点：应用场景小，适合大小几kb的图片，页面引用图片次数不多的场景，否则会导致字符串过长
-</code></pre><p>3、 css,svg,iconfont：css可以用来绘制相对简单的结构来替代图片，使用before或者after伪元素来丰富图案的复杂度。iconfont是一种web字体来代替图片的解决方案</p>
+- 缺点：应用场景小，适合大小几kb的图片，页面引用图片次数不多的场景，否则会导致字符串过长</code></pre><p>3、 css,svg,iconfont：css可以用来绘制相对简单的结构来替代图片，使用before或者after伪元素来丰富图案的复杂度。iconfont是一种web字体来代替图片的解决方案</p>
 <pre><code>- 优点：实现简单，体积小，简单的动态效果
-- 缺点：css兼容性问题，绘制复制图案较难
-</code></pre><p>4、 响应式图片：不同终端使用不同尺寸的图片</p>
+- 缺点：css兼容性问题，绘制复制图案较难</code></pre><p>4、 响应式图片：不同终端使用不同尺寸的图片</p>
 <pre><code>- 优点：减少不必要的图片加载
-- 缺点：图片本身并没有优化
-</code></pre><p>5、 使用更好的图片格式：webp，bpg等</p>
+- 缺点：图片本身并没有优化</code></pre><p>5、 使用更好的图片格式：webp，bpg等</p>
 <pre><code>- 优点：压缩更强,图片体积更小
-- 缺点：兼容性(安卓,chrome支持)
-</code></pre><h3 id="图片压缩："><a href="#图片压缩：" class="headerlink" title="图片压缩："></a>图片压缩：</h3><p>在线压缩：</p>
-<p><a href="https://tinypng.com/" target="_blank" rel="external">tinypng</a></p>
-<p><a href="https://www.upyun.com/webp" target="_blank" rel="external">webp</a></p>
+- 缺点：兼容性(安卓,chrome支持)</code></pre><h3 id="图片压缩："><a href="#图片压缩：" class="headerlink" title="图片压缩："></a>图片压缩：</h3><p>在线压缩：</p>
+<p><a href="https://tinypng.com/" target="_blank" rel="noopener">tinypng</a></p>
+<p><a href="https://www.upyun.com/webp" target="_blank" rel="noopener">webp</a></p>
 <p>或者借助前端构建工具</p>
 <h2 id="HTML渲染过程"><a href="#HTML渲染过程" class="headerlink" title="HTML渲染过程"></a>HTML渲染过程</h2><p>HTML页面渲染过程</p>
 <p><img src="http://dry-image.test.upcdn.net/dom.png" alt="dom"></p>
